@@ -5,34 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="129a5410-d4ec-4b13-8c93-824f7de47e14" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/final project.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/PeopleRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHashmap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/people.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ToothlessOS"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ToothlessOS&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:ToothlessOS/DKU-CS201-final-project.git",
-    "accountId": "a9d03af5-34b1-4efa-a751-01cd33ad494a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ToothlessOS/DKU-CS201-final-project.git&quot;,
+    &quot;accountId&quot;: &quot;a9d03af5-34b1-4efa-a751-01cd33ad494a&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2pnKJtTE0ZZtMEQVtvdsDGTVWr2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,22 +59,59 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Anthony Cao/OneDrive - Duke University/24-1-s2/CS201/FinalProject/docs",
+    "last_opened_file_path": "C:/Users/Anthony Cao/OneDrive - Duke University/24-1-s2/CS201/FinalProject/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.App.executor": "Run",
+    "应用程序.MyHashmap.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anthony Cao\OneDrive - Duke University\24-1-s2\CS201\FinalProject\src\main\resources" />
       <recent name="C:\Users\Anthony Cao\OneDrive - Duke University\24-1-s2\CS201\FinalProject\docs" />
     </key>
+  </component>
+  <component name="RunManager" selected="应用程序.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xyz.toothlessos.App" />
+      <module name="FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xyz.toothlessos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyHashmap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xyz.toothlessos.util.MyHashmap" />
+      <module name="FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xyz.toothlessos.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.App" />
+        <item itemvalue="应用程序.MyHashmap" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -79,10 +130,25 @@
       <option name="presentableId" value="Default" />
       <updated>1733396333894</updated>
       <workItem from="1733396334984" duration="1493000" />
+      <workItem from="1733459560680" duration="117000" />
+      <workItem from="1733459692929" duration="57000" />
+      <workItem from="1733459801440" duration="17465000" />
+      <workItem from="1733482874808" duration="3106000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
