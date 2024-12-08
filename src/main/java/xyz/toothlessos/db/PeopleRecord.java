@@ -10,7 +10,7 @@ public class PeopleRecord implements Comparable<PeopleRecord> {
     private String city;
     private String county;
     private String state;
-    private int zip;
+    private String zip;
     private String phone1;
     private String phone2;
     private String email;
@@ -20,7 +20,7 @@ public class PeopleRecord implements Comparable<PeopleRecord> {
     public PeopleRecord(String givenName, String familyName,
                         String companyName, String address,
                         String city, String county,
-                        String state, int zip,
+                        String state, String zip,
                         String phone1, String phone2,
                         String email, String web, String birthday) {
         this.givenName = givenName;
@@ -68,6 +68,15 @@ public class PeopleRecord implements Comparable<PeopleRecord> {
     public String getFamilyName() {
         return this.familyName;
     }
+
+    public String getCompanyName() { return this.companyName; }
+
+    public String getAddress() { return this.address; }
+    public String getCity() { return this.city; }
+    public String getCounty() { return this.county; }
+    public String getState() { return this.state; }
+    public String getZip() { return this.zip; }
+
 
     public String toString(){
         return String.format("%s %s", givenName, familyName);

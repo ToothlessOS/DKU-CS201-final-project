@@ -14,7 +14,7 @@ public class MyBST extends BinaryTree {
     }
 
     // The helper method for 'insert'
-    private Node<PeopleRecord> insert(Node<PeopleRecord> node, PeopleRecord record, int heightCounter) {
+    public Node<PeopleRecord> insert(Node<PeopleRecord> node, PeopleRecord record, int heightCounter) {
         // Base case
         if (node == null){
             node = new Node<>(record);
@@ -38,24 +38,39 @@ public class MyBST extends BinaryTree {
         return node;
     }
 
-    public ArrayList<Node<PeopleRecord>> search(String name){
+    public ArrayList<Node<PeopleRecord>> search(String FirstName, String LastName) {
         ArrayList<Node<PeopleRecord>> results = new ArrayList<>();
-        search(this.root, name, results);
+        search(this.root, FirstName, LastName, results);
         return results;
     }
 
     // Helper method for search
-    private void search(Node<PeopleRecord> node, String name,
+    private void search(Node<PeopleRecord> node, String FirstName, String LastName,
                         ArrayList<Node<PeopleRecord>> results) {
         // Base + recursive cases
         if (node != null){
             // Here we use pre-order
-            if (node.content.getFamilyName().equals(name) || node.content.getGivenName().equals(name)){
+            if (node.content.getFamilyName().equals(LastName) && node.content.getGivenName().equals(FirstName)){
                 results.add(node);
             }
-            search(node.left, name, results);
-            search(node.right, name, results);
+            search(node.left, FirstName, LastName, results);
+            search(node.right, FirstName, LastName, results);
         }
+    }
+
+    public ArrayList<PeopleRecord> getAllRecords() {
+        ArrayList<PeopleRecord> results = new ArrayList<>();
+        getAllRecordsRec(root, results);
+        return results;
+    }
+
+    private void getAllRecordsRec(Node root, ArrayList result) {
+        if (root != null){
+            result.add(root);
+            getAllRecordsRec(root.left, result);
+            getAllRecordsRec(root.right, result);
+        }
+
     }
 
 }
