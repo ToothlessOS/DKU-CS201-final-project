@@ -4,6 +4,7 @@ import xyz.toothlessos.util.MyBST;
 import xyz.toothlessos.util.MyHashmap;
 import xyz.toothlessos.util.MyHeap;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.*;
 import java.util.regex.*;
@@ -40,6 +41,13 @@ public class DatabaseProcessing {
             System.out.println("Error loading data: "+e.getMessage());
         }
     }
+
+
+    public void BSTVisualizerImageRec() {
+        MyBST.BSTVisualizer visualizer = bst.new BSTVisualizer(bst); // 创建 BSTVisualizer 实例
+        visualizer.setVisible(true); // 设置窗口可见
+    }
+
 
 
     // Search Name
@@ -93,6 +101,8 @@ public class DatabaseProcessing {
         DatabaseProcessing process = new DatabaseProcessing();
         process.loadData();
 
+
+
         ArrayList<PeopleRecord> result = process.search("Clorinda","Heimann");
         for(PeopleRecord i : result){
             System.out.println(i);
@@ -100,6 +110,17 @@ public class DatabaseProcessing {
 
         process.sort();
         System.out.println("Sorted Records: ");
+
+        // 最频繁单词测试
+        try {
+            Map<String, Integer> frequentWords = process.getMostFrequentWords(5, 4);
+            System.out.println("Most Frequent Words: " + frequentWords);
+        } catch (ShortLengthException e) {
+            System.err.println(e.getMessage());
+        }
+
+        //绘图
+        process.BSTVisualizerImageRec();
     }
 
 

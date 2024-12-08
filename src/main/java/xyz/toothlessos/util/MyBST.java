@@ -1,6 +1,9 @@
 package xyz.toothlessos.util;
 
 import xyz.toothlessos.db.PeopleRecord;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class MyBST extends BinaryTree {
@@ -71,4 +74,57 @@ public class MyBST extends BinaryTree {
             getAllRecordsRec(root.right, result);
         }
     }
+
+    public class BSTVisualizer extends JFrame {
+        private final MyBST bst;
+
+        public BSTVisualizer(MyBST bst) {
+            this.bst = bst;
+            setTitle("Binary Search Tree Visualizer");
+            setSize(8000, 6000);
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            add(new BSTPanel(bst));
+        }
+    }
+
+    public class BSTPanel extends JPanel {
+        private final MyBST bst;
+        private final int nodeSize = 40; // 节点圆形的直径
+        private final int vGap = 60;    // 节点之间的垂直间隔
+
+        public BSTPanel(MyBST bst) {
+            this.bst = bst;
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            if (bst.root != null) {
+                drawTree(g, bst.root, getWidth() / 2, 50, getWidth() / 4);
+            }
+        }
+
+        private void drawTree(Graphics g, BinaryTree.Node<PeopleRecord> node, int x, int y, int hGap) {
+            if (node.left != null) {
+                // 绘制左子节点的连线
+                g.drawLine(x, y, x - hGap, y + vGap);
+                drawTree(g, node.left, x - hGap, y + vGap, hGap / 2);
+            }
+            if (node.right != null) {
+                // 绘制右子节点的连线
+                g.drawLine(x, y, x + hGap, y + vGap);
+                drawTree(g, node.right, x + hGap, y + vGap, hGap / 2);
+            }
+            // 绘制节点本身
+            g.setColor(Color.GRAY);
+            g.fillOval(x - nodeSize / 2, y - nodeSize / 2, nodeSize, nodeSize);
+            g.setColor(Color.RED);
+            String value = node.content.getGivenName() + " " + node.content.getFamilyName();
+            g.drawString(value, x - value.length() * 3, y + 5);
+        }
+    }
 }
+
+
+
+
