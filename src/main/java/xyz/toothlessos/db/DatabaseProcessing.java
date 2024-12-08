@@ -23,7 +23,7 @@ public class DatabaseProcessing {
 
     //Load the file
     public void loadData() {
-        String fileName ="src/main/resources/people.txt";
+        String fileName ="src/main/resources/people_small.txt";
         try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
             String line;
             while ((line = reader.readLine())!=null){
