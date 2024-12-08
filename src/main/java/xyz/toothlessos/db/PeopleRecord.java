@@ -1,5 +1,8 @@
 package xyz.toothlessos.db;
 
+import java.io.Serializable;
+import java.text.*;
+import java.util.Comparator;
 import java.util.Date;
 
 public class PeopleRecord implements Comparable<PeopleRecord> {
@@ -76,9 +79,15 @@ public class PeopleRecord implements Comparable<PeopleRecord> {
     public String getCounty() { return this.county; }
     public String getState() { return this.state; }
     public String getZip() { return this.zip; }
+    public String getPhone1() { return this.phone1; }
+    public String getPhone2() { return this.phone2; }
+    public String getEmail() { return this.email; }
+    public String getWeb() { return this.web; }
+    public String getBirthday() { return this.birthday; }
 
 
     public String toString(){
         return String.format("%s %s", givenName, familyName);
     }
 }
+
