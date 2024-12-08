@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="129a5410-d4ec-4b13-8c93-824f7de47e14" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHashmap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHashmap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "2versionHashMap",
+    "git-widget-placeholder": "正在合并 2versionHashMap",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/文档/CS 201/作业/Final/DKU-CS201-final-project",
@@ -61,6 +66,7 @@
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true",
     "应用程序.App.executor": "Run",
+    "应用程序.BSTVisualizer.executor": "Run",
     "应用程序.DatabaseProcessing.executor": "Run",
     "应用程序.MyHashmap.executor": "Run"
   }
@@ -128,7 +134,7 @@
       <workItem from="1733482874808" duration="3106000" />
       <workItem from="1733501319381" duration="488000" />
       <workItem from="1733541313597" duration="9419000" />
-      <workItem from="1733642157612" duration="2979000" />
+      <workItem from="1733642157612" duration="707000" />
     </task>
     <servers />
   </component>

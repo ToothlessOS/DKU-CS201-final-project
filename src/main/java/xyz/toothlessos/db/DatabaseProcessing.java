@@ -4,9 +4,11 @@ import xyz.toothlessos.util.MyBST;
 import xyz.toothlessos.util.MyHashmap;
 import xyz.toothlessos.util.MyHeap;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.*;
 import java.util.regex.*;
+import java.util.stream.Collectors;
 
 public class DatabaseProcessing {
     private MyBST bst;
@@ -41,9 +43,16 @@ public class DatabaseProcessing {
     }
 
 
+    public void BSTVisualizerImageRec() {
+        MyBST.BSTVisualizer visualizer = bst.new BSTVisualizer(bst); // 创建 BSTVisualizer 实例
+        visualizer.setVisible(true); // 设置窗口可见
+    }
+
+
+
     // Search Name
-    public ArrayList search(String firstName, String lastName) {
-        ArrayList result = bst.search(firstName, lastName);
+    public ArrayList<PeopleRecord> search(String firstName, String lastName) {
+        ArrayList<PeopleRecord> result = bst.search(firstName, lastName);
         return result;
     }
 
@@ -57,7 +66,7 @@ public class DatabaseProcessing {
     }
 
     // Get the most frequent words in relevant fields
-    /*public Map<String, Integer> getMostFrequentWords(int count, int len) throws ShortLengthException {
+    public Map<String, Integer> getMostFrequentWords(int count, int len) throws ShortLengthException {
         if (len < 3) {
             throw new ShortLengthException("Word length must be at least 3.");
         }
@@ -77,24 +86,41 @@ public class DatabaseProcessing {
         }
 
         return hashmap.getAllEntries().stream()
-                .sorted((e1, e2) -> Integer.compare(e2.value, e1.value)) // Sort by frequency descending
+                .sorted((e1, e2) -> Integer.compare(e2.getValue(), e1.getValue())) // Sort by frequency descending
                 .limit(count)
-                .collect(Collectors.toMap(e -> e.key, e -> e.value, (a, b) -> b, LinkedHashMap::new));
+                .collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (a, b) -> b, LinkedHashMap::new));
     }
-    */
+
+    class ShortLengthException extends Exception {
+        public ShortLengthException(String message) {
+            super(message);
+        }
+    }
+
     public static void main(String[] args) {
         DatabaseProcessing process = new DatabaseProcessing();
         process.loadData();
 
 
-        ArrayList<MyBST.Node<PeopleRecord>> result = process.search("Clorinda","Heimann");
-        for(MyBST.Node i : result){
-            System.out.println(i.content);
-        }
 
+        ArrayList<PeopleRecord> result = process.search("Clorinda","Heimann");
+        for(PeopleRecord i : result){
+            System.out.println(i);
+        }
 
         process.sort();
         System.out.println("Sorted Records: ");
+
+        // 最频繁单词测试
+        try {
+            Map<String, Integer> frequentWords = process.getMostFrequentWords(5, 4);
+            System.out.println("Most Frequent Words: " + frequentWords);
+        } catch (ShortLengthException e) {
+            System.err.println(e.getMessage());
+        }
+
+        //绘图
+        process.BSTVisualizerImageRec();
     }
 
 
