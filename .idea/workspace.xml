@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="129a5410-d4ec-4b13-8c93-824f7de47e14" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/people_small.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" afterDir="false" />
@@ -52,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "3version",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Anthony Cao/OneDrive - Duke University/24-1-s2/CS201/FinalProject/src/main/resources",
@@ -63,7 +63,7 @@
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true",
     "应用程序.App.executor": "Run",
-    "应用程序.DatabaseProcessing.executor": "Debug",
+    "应用程序.DatabaseProcessing.executor": "Run",
     "应用程序.MyHashmap.executor": "Run"
   }
 }]]></component>
@@ -73,7 +73,7 @@
       <recent name="C:\Users\Anthony Cao\OneDrive - Duke University\24-1-s2\CS201\FinalProject\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.App">
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="xyz.toothlessos.App" />
       <module name="FinalProject" />
@@ -139,15 +139,6 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="xyz.toothlessos.util.MyHeap$HeapNode" memberName="content" />

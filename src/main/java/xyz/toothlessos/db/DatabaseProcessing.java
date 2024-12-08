@@ -13,12 +13,14 @@ import java.util.stream.Collectors;
 public class DatabaseProcessing {
     private MyBST bst;
     private MyHeap heap;
+    private MyHeap imageHeap;
     private MyHashmap hashmap;
 
     public DatabaseProcessing() {
         bst = new MyBST();
         heap = new MyHeap();
         hashmap = new MyHashmap(1000);
+        imageHeap = new MyHeap();
     }
 
     //Load the file
@@ -48,6 +50,13 @@ public class DatabaseProcessing {
         visualizer.setVisible(true); // 设置窗口可见
     }
 
+    public void HeapVisualizerImageRec() {
+        MyHeap.HeapVisualizer visualizer = imageHeap.new HeapVisualizer(imageHeap); // 创建 BSTVisualizer 实例
+        visualizer.setVisible(true); // 设置窗口可见
+    }
+
+
+
 
 
     // Search Name
@@ -59,9 +68,12 @@ public class DatabaseProcessing {
     //Sort
     public ArrayList<PeopleRecord> sort(){
         ArrayList<PeopleRecord> records = bst.getAllRecords();
-        for (PeopleRecord record : records){
+
+        for (PeopleRecord record : records) {
             heap.insert(record);
+            imageHeap.insert(record);
         }
+
 
         ArrayList<PeopleRecord> results = new ArrayList<>();
         while (!heap.isEmpty()){
@@ -69,6 +81,8 @@ public class DatabaseProcessing {
         }
         return results;
     }
+
+
 
     // Get the most frequent words in relevant fields
     public Map<String, Integer> getMostFrequentWords(int count, int len) throws ShortLengthException {
@@ -108,12 +122,15 @@ public class DatabaseProcessing {
 
 
 
+
         ArrayList<PeopleRecord> result = process.search("Clorinda","Heimann");
         for(PeopleRecord i : result){
             System.out.println(i);
         }
 
         System.out.println("Sorted Records: ");
+
+        System.out.println("Sorted Records: "+ process.sort());
 
         // 最频繁单词测试
         try {
@@ -125,5 +142,11 @@ public class DatabaseProcessing {
 
         //绘图
         process.BSTVisualizerImageRec();
+        process.HeapVisualizerImageRec();
+
+
+
+
+
     }
 }
