@@ -38,20 +38,20 @@ public class MyBST extends BinaryTree {
         return node;
     }
 
-    public ArrayList<Node<PeopleRecord>> search(String FirstName, String LastName) {
-        ArrayList<Node<PeopleRecord>> results = new ArrayList<>();
+    public ArrayList<PeopleRecord> search(String FirstName, String LastName) {
+        ArrayList<PeopleRecord> results = new ArrayList<>();
         search(this.root, FirstName, LastName, results);
         return results;
     }
 
     // Helper method for search
     private void search(Node<PeopleRecord> node, String FirstName, String LastName,
-                        ArrayList<Node<PeopleRecord>> results) {
+                        ArrayList<PeopleRecord> results) {
         // Base + recursive cases
         if (node != null){
             // Here we use pre-order
             if (node.content.getFamilyName().equals(LastName) && node.content.getGivenName().equals(FirstName)){
-                results.add(node);
+                results.add(node.content);
             }
             search(node.left, FirstName, LastName, results);
             search(node.right, FirstName, LastName, results);
@@ -66,11 +66,9 @@ public class MyBST extends BinaryTree {
 
     private void getAllRecordsRec(Node root, ArrayList result) {
         if (root != null){
-            result.add(root);
+            result.add(root.content);
             getAllRecordsRec(root.left, result);
             getAllRecordsRec(root.right, result);
         }
-
     }
-
 }
