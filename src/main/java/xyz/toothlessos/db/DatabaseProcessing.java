@@ -49,12 +49,17 @@ public class DatabaseProcessing {
     }
 
     //Sort
-    public void sort(){
+    public ArrayList<PeopleRecord> sort(){
         ArrayList<PeopleRecord> records = bst.getAllRecords();
         for (PeopleRecord record : records){
             heap.insert(record);
         }
-        heap.getInfo();
+
+        ArrayList<PeopleRecord> results = new ArrayList<>();
+        while (!heap.isEmpty()){
+            results.add(heap.pop());
+        }
+        return results;
     }
 
     // Get the most frequent words in relevant fields
@@ -98,9 +103,9 @@ public class DatabaseProcessing {
             System.out.println(i);
         }
 
-        process.sort();
         System.out.println("Sorted Records: ");
+        for (PeopleRecord i: process.sort()){
+            System.out.println(i);
+        }
     }
-
-
 }
