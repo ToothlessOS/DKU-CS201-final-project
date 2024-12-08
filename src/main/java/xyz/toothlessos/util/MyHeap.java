@@ -100,23 +100,23 @@ public class MyHeap extends BinaryTree {
     }
 
     // Implementation of the required 'find' method
-    public ArrayList<HeapNode<PeopleRecord>> find(String name){
-        ArrayList<HeapNode<PeopleRecord>> results = new ArrayList<>();
-        find(this.root, name, results);
+    public ArrayList<PeopleRecord> find(String FirstName, String LastName){
+        ArrayList<PeopleRecord> results = new ArrayList<>();
+        find(this.root, FirstName, LastName, results);
         return results;
     }
 
     // Helper method for search
-    private void find(HeapNode<PeopleRecord> node, String name,
-                        ArrayList<HeapNode<PeopleRecord>> results) {
+    private void find(HeapNode<PeopleRecord> node, String FirstName, String LastName,
+                        ArrayList<PeopleRecord> results) {
         // Base + recursive cases
         if (node != null){
             // Here we use pre-order
-            if (node.content.getFamilyName().equals(name) || node.content.getGivenName().equals(name)){
-                results.add(node);
+            if (node.content.getFamilyName().equals(LastName) || node.content.getGivenName().equals(FirstName)){
+                results.add(node.content);
             }
-            find(node.left, name, results);
-            find(node.right, name, results);
+            find(node.left, FirstName, LastName, results);
+            find(node.right, FirstName, LastName, results);
         }
     }
 }

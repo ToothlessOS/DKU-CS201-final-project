@@ -42,8 +42,8 @@ public class DatabaseProcessing {
 
 
     // Search Name
-    public ArrayList search(String firstName, String lastName) {
-        ArrayList result = bst.search(firstName, lastName);
+    public ArrayList<PeopleRecord> search(String firstName, String lastName) {
+        ArrayList<PeopleRecord> result = bst.search(firstName, lastName);
         return result;
     }
 
@@ -86,12 +86,10 @@ public class DatabaseProcessing {
         DatabaseProcessing process = new DatabaseProcessing();
         process.loadData();
 
-
-        ArrayList<MyBST.Node<PeopleRecord>> result = process.search("Clorinda","Heimann");
-        for(MyBST.Node i : result){
-            System.out.println(i.content);
+        ArrayList<PeopleRecord> result = process.search("Clorinda","Heimann");
+        for(PeopleRecord i : result){
+            System.out.println(i);
         }
-
 
         process.sort();
         System.out.println("Sorted Records: ");

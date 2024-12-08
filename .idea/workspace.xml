@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="129a5410-d4ec-4b13-8c93-824f7de47e14" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/PeopleRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/PeopleRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHashmap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHashmap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DataBaseProcessing&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/文档/CS 201/作业/Final/DKU-CS201-final-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.App.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.DatabaseProcessing.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.MyHashmap.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "dev2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/文档/CS 201/作业/Final/DKU-CS201-final-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.App.executor": "Run",
+    "应用程序.DatabaseProcessing.executor": "Run",
+    "应用程序.MyHashmap.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Anthony Cao\OneDrive - Duke University\24-1-s2\CS201\FinalProject\src\main\resources" />
@@ -140,16 +134,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
