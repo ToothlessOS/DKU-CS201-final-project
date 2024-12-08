@@ -14,7 +14,7 @@ public class MyHeap extends BinaryTree {
     }
 
     // The child class HeapNode have additional 'parent' pointer to help with TrickleUP
-    class HeapNode<E> extends Node<E> {
+    public class HeapNode<E> extends Node<E> {
         // Override of attributes
         HeapNode<E> parent;
         HeapNode<E> left;

@@ -11,8 +11,8 @@ public class BinaryTree {
     int height;
     Graphics g; // The visualization of the tree
 
-    class Node<E>{
-        E content;
+    public class Node<E>{
+        public E content;
         Node<E> left;
         Node<E> right;
 
