@@ -50,6 +50,7 @@ public class MyHeap extends BinaryTree {
                 current.left = new HeapNode<>(record);
                 this.size++;
                 // heapify (trickleUP)
+                current.left.parent = current;
                 trickleUP(current.left);
                 return;
             }else{
@@ -60,6 +61,7 @@ public class MyHeap extends BinaryTree {
                 current.right = new HeapNode<>(record);
                 this.size++;
                 // heapify (trickleUP)
+                current.right.parent = current;
                 trickleUP(current.right);
                 return;
             }else{
@@ -117,6 +119,99 @@ public class MyHeap extends BinaryTree {
             }
             find(node.left, FirstName, LastName, results);
             find(node.right, FirstName, LastName, results);
+        }
+    }
+
+    // Pop: remove node on the top (root) of the heap
+    public PeopleRecord pop(){
+        if (this.root == null){
+            return null;
+        }
+        // First, exchange root node with the last node (Just change content, preserve tree structure)
+        HeapNode<PeopleRecord> LastNode = findLastNode();
+        PeopleRecord temp = this.root.content;
+        this.root.content = LastNode.content;
+        LastNode.content = temp;
+        // Then, we can directly remove the root node
+        // The removing procedures
+        // Assuming LastNode is identified, and we have access to its parent
+        if (LastNode.parent != null) {
+            if (LastNode.parent.left == LastNode) {
+                LastNode.parent.left = null; // Disconnect from parent
+            } else if (LastNode.parent.right == LastNode) {
+                LastNode.parent.right = null; // Disconnect from parent
+            }
+        }
+        // Just make the reference 'null' won't help: you need to remove all pointers to the node
+        // Not deleting, just make it eligible for garbage collection
+        LastNode = null;
+        // Finally, we perform trickleDOWN on the current 'root node'
+        trickleDown(this.root);;
+        this.size--;
+        // Return the results
+        return temp;
+    }
+
+    // Helper method 1: Find the last node
+    private HeapNode<PeopleRecord> findLastNode(){
+        // We can iterate by levelOrder until we find null
+        // Because of assignment requirements, we use ArrayDeque instead
+        Queue<HeapNode<PeopleRecord>> queue = new ArrayDeque<>();
+        ArrayList<HeapNode<PeopleRecord>> output = new ArrayList<>();
+        queue.add(this.root);
+        output.add(this.root);
+
+        while (!queue.isEmpty()){
+            HeapNode<PeopleRecord> current = queue.poll();
+
+            if (current.left != null){
+                queue.add(current.left);
+                output.add(current.left);
+            }
+
+            if (current.right != null){
+                queue.add(current.right);
+                output.add(current.right);
+            }
+        }
+        return output.get(output.size() - 1);
+    }
+
+    // Helper method 2: TrickleDOWN the 'root'
+    private void trickleDown(HeapNode<PeopleRecord> current){
+        // Base cases
+        // Case 1: Reach the end of the tree
+        if (current.left == null){
+            return;
+        }
+        if (current.right == null){
+            if (current.content.compareTo(current.left.content) > 0){
+                PeopleRecord temp = current.content;
+                current.content = current.left.content;
+                current.left.content = temp;
+            }
+            return;
+        }
+        // Case 2: Satisfy the conditions mid-way
+        if (current.content.compareTo(current.left.content) < 0 &&
+                current.content.compareTo(current.right.content) < 0){
+            return;
+        }
+        // Recursive case
+        if (current.content.compareTo(current.left.content) > 0
+                || current.content.compareTo(current.right.content) > 0){
+            if (current.left.content.compareTo(current.right.content) < 0){
+                PeopleRecord temp = current.content;
+                current.content = current.left.content;
+                current.left.content = temp;
+                trickleDown(current.left);
+            }
+            else if (current.left.content.compareTo(current.right.content) > 0){
+                PeopleRecord temp = current.content;
+                current.content = current.right.content;
+                current.right.content = temp;
+                trickleDown(current.right);
+            }
         }
     }
 }
