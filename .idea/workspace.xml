@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="129a5410-d4ec-4b13-8c93-824f7de47e14" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/AgeComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/DatabaseProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/MyHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/PeopleRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/db/PeopleRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/toothlessos/util/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/people_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/people_small.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "3version",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Anthony Cao/OneDrive - Duke University/24-1-s2/CS201/FinalProject/src/main/resources",

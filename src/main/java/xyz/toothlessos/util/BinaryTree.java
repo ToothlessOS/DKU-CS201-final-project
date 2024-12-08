@@ -45,23 +45,4 @@ public class BinaryTree {
     public int[] getInfo(){
         return new int[]{this.size, this.height};
     }
-
-    /**
-     * The required 'draw' method
-     */
-    public void draw(){
-        // JFrame Setup
-        JFrame frame = new JFrame("Tree Visualizer (v0.1)");
-        frame.add(new JPanelVis());
-        frame.setSize(1000, 500);
-        frame.setVisible(true);
-    }
-
-    class JPanelVis extends JPanel{
-        @Override
-        public void paintComponent(Graphics g){
-           // Draw the tree here
-            g.drawOval(0, 0, 25, 25);
-        }
-    }
 }
